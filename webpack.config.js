@@ -25,12 +25,7 @@ module.exports = {
 				loader: "babel-loader"
 			},
 			{
-				test: /\.css$/,
-				exclude: /node_modules/,
-				loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader")
-			},
-			{
-				test: /\.scss$/,
+				test: /\.scss$|\.css$/,
 				exclude: /node_modules/,
 				loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!sass-loader")
 			}
