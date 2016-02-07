@@ -4,7 +4,9 @@
   "description": "Webpack demo",
   "main": "app.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "dev": "webpack-dev-server --inline --devtool eval --progress --colors --hot --content-base public",
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
   },
   "author": "Joe Eames",
   "license": "ISC",
