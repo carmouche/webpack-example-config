@@ -3,7 +3,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 	context: path.resolve('js'),
-	entry: ["./utils", "./app", "webpack/hot/only-dev-server"],
+	entry: ["./utils", "./app"],
 	output: {
 		path: path.resolve('build/'),
 		publicPath: '/public/assets/',
@@ -20,7 +20,7 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.es6$/,
+				test: /\.(es6|js)$/,
 				exclude: /node_modules/,
 				loader: "babel-loader"
 			},
